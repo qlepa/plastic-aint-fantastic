@@ -1,17 +1,24 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import '/home/klepa/Desktop/no/src/scss/main.scss';
+import './scss/main.scss';
 
-class App extends React.Component {
+class App extends Component {
    constructor(props) {
    super(props);
-
+    this.state= {
+        status: "Start"
+    }
    }
    render(){
-     return (
-         <div>Hellooooo</div>
+       switch ( this.state.status) {
+           case "Start":
+               return (
+                   <div>
+                       Hello
+                   </div>
+               )
+       }
 
-     )
    }
  }
 
