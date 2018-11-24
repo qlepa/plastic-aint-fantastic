@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Start from "./Start";
+import Data from "./Data";
 
 class App extends Component {
     constructor(props) {
@@ -8,7 +9,15 @@ class App extends Component {
             status: "Start",
             projectName: null,
             participants: null,
-            duration: null
+            duration: null,
+            type: '',
+            cup: 0,
+            bottle: 0,
+            drinks: 0,
+            knife: 0,
+            fork: 0,
+            plate: 0,
+            straw: 0
         }
     }
     setStage = (stageName) => {
@@ -23,6 +32,18 @@ class App extends Component {
             duration: duration
         })
     }
+    getData = (type, cup, bottle, drinks, knife, fork, plate, straw) => {
+        this.setState({
+            type: type,
+            cup: cup,
+            bottle: bottle,
+            drinks: drinks,
+            knife: knife,
+            fork: fork,
+            plate: plate,
+            straw: straw
+        })
+    }
     render(){
         switch ( this.state.status) {
             case "Start":
@@ -34,11 +55,13 @@ class App extends Component {
             case "Data":
                 return (
                     <div>
-                        <h3>
-                        {this.state.projectName}
-                            {this.state.participants}
-                            {this.state.duration}
-                        </h3>
+                        <Data setStage={this.setStage} getData={this.getData}/>
+                    </div>
+                )
+            case "Summary":
+                return (
+                    <div>
+                        {this.state.cup}
                     </div>
                 )
         }
