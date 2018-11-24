@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '/home/klepa/Desktop/no/src/scss/main.scss';
+import './scss/main.scss';
+import Data from './Components/Data'
 
 class App extends React.Component {
    constructor(props) {
@@ -9,8 +10,7 @@ class App extends React.Component {
    }
    render(){
      return (
-         <div>Hellooooo</div>
-
+         <Data/>
      )
    }
  }
