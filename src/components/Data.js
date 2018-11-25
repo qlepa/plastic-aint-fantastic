@@ -76,7 +76,7 @@ class Data extends React.Component {
     }
     render() {
         return (
-
+            <div className="data">
             <section className="container">
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
@@ -122,6 +122,7 @@ class Data extends React.Component {
 
                 </form>
             </section>
+            </div>
         )
     }
 }
