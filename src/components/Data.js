@@ -5,7 +5,7 @@ class Data extends React.Component {
         super(props);
 
         this.state = {
-            type: '',
+            type: this.props.type,
             cup: '',
             bottle: '',
             drinks: '',
@@ -74,9 +74,9 @@ class Data extends React.Component {
         this.setState({
             type: e.target.value
         })
+
     }
     handleClick = e => {
-        console.log(this.state.straw);
         this.props.setStage('Summary')
         this.props.getData(this.state.type, this.state.cup, this.state.bottle, this.state.drinks, this.state.knife, this.state.fork, this.state.plate, this.state.straw)
     }
