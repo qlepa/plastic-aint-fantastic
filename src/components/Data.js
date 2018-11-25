@@ -87,34 +87,34 @@ class Data extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <h1>Select elements</h1>
                     <fieldset>
-                        <legend>Napoje</legend>
+                        <legend>Beverages</legend>
                         <input type="checkbox" name="cup" value="1" onChange={this.handleCup}/>
-                        <label htmlFor="cup"> Kubeczki </label><br/>
+                        <label htmlFor="cup"> Cups </label><br/>
 
                         <input type="checkbox" name="bottle" value="1" onChange={this.handleBottle}/>
-                        <label htmlFor="bottle"> Butelki 0.5l </label><br/>
+                        <label htmlFor="bottle"> Bottles 0.5l </label><br/>
 
                         <input type="checkbox" name="drinks" value="1" onChange={this.handleDrinks}/>
-                        <label htmlFor="drinks"> Gorące napoje</label>
+                        <label htmlFor="drinks"> Coffee</label>
                         <br/>
                     </fieldset>
 
                     <fieldset>
-                        <legend>Sztućce</legend>
+                        <legend>Cuttlery</legend>
                         <input type="checkbox" name="knife" value="1" onChange={this.handleKnife}/>
-                        <label htmlFor="knife">Noże</label>
+                        <label htmlFor="knife">Knives</label>
                         <br/>
 
                         <input type="checkbox" name="fork" value="1" onChange={this.handleFork}/>
-                        <label htmlFor="fork">Widelce</label>
+                        <label htmlFor="fork">Forks</label>
                         <br/>
 
                         <input type="checkbox" name="plate" value="1" onChange={this.handlePlate}/>
-                        <label htmlFor="plate">Talerze</label>
+                        <label htmlFor="plate">Plates</label>
                         <br/>
 
                         <input type="checkbox" name="straw" value="1" onChange={this.handleStraw}/>
-                        <label htmlFor="straw">Słomki</label>
+                        <label htmlFor="straw">Straws</label>
                         <br/>
                     </fieldset>
                     <br/>
