@@ -6,6 +6,7 @@ const Summary = (props) => {
     let data = props.data;
     return (
         <section className='container'>
+            <h1>Summary</h1>
             <section className='usage'>
                 <ul>
                     <List data={data}/>
