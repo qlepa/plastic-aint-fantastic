@@ -114,6 +114,9 @@ button{
     li{
       padding:5px 0;
       font-size:20px;
+      font-weight:700;
+      color:#1d1d1d;
+      text-align:center;
     }
   }
   fieldset{
@@ -123,5 +126,36 @@ button{
   }
   p{
     font-size:18px;
+    color:$secondary-color;
   }
+
+}
+
+.tips{
+  margin:70px 0;
+  width:1000px;
+  h1{
+    margin-bottom:20px;
+  }
+  h3{
+    color:$primary-color;
+    font-size:25px;
+  }
+  p{
+    line-height:32px;
+  }
+  a{
+    color:$primary-color;
+    font-weight:700;
+  }
+}
+
+.spending{
+  h1{
+    font-size:40px;
+  }
+}
+
+.check{
+  font-weight:700;
 }
