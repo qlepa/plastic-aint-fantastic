@@ -100,7 +100,7 @@ const Cups = (props) => {
     } else {
         return null
     }
-}
+};
 
 
 const SummaryCalc = (props) => {
@@ -152,8 +152,9 @@ const SummaryCalc = (props) => {
             bottles: '',
         };
         for (let key in usageOBj) {
+            console.log(props.data[key]);
             if (props.data[key] > 0) {
-                usageOBj[key] = Math.ceil(props.data.ppl * partyType[key] * props.data.hours)
+                usageOBj[key] = Math.ceil(props.data.ppl * partyType[key] * props.data.duration)
             } else {
                 usageOBj[key] = 0;
             }

@@ -1,67 +1,72 @@
 import React, {Component} from 'react';
 import Start from "./Start";
 import Data from "./Data";
+import SummaryCalc from "./summary"
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state= {
+        this.state = {
             status: "Start",
             projectName: null,
-            participants: null,
-            duration: null,
-            type: '',
-            cup: 0,
-            bottle: 0,
+            ppl: 0,
+            duration: 0,
+            party: 'bufet',
+            cups: 0,
+            bottles: 0,
             drinks: 0,
-            knife: 0,
+            knives: 0,
             fork: 0,
-            plate: 0,
-            straw: 0
+            plates: 0,
+            straws: 0
         }
     }
+
     setStage = (stageName) => {
         this.setState({
             status: stageName
         })
-    }
-    getStart = (projectName, participants, duration ) => {
+    };
+
+    getStart = (projectName, participants, duration) => {
         this.setState({
             projectName: projectName,
             participants: participants,
             duration: duration
         })
-    }
+    };
+
     getData = (type, cup, bottle, drinks, knife, fork, plate, straw) => {
         this.setState({
-            type: type,
-            cup: cup,
-            bottle: bottle,
+            party: type,
+            cups: cup,
+            bottles: bottle,
             drinks: drinks,
-            knife: knife,
+            knives: knife,
             fork: fork,
-            plate: plate,
-            straw: straw
+            plates: plate,
+            straws: straw
         })
-    }
-    render(){
-        switch ( this.state.status) {
+    };
+
+    render() {
+        switch (this.state.status) {
             case "Start":
                 return (
                     <div>
                         <Start setStage={this.setStage} getStart={this.getStart}/>
                     </div>
-                )
+                );
             case "Data":
                 return (
                     <div>
                         <Data setStage={this.setStage} getData={this.getData}/>
                     </div>
-                )
+                );
             case "Summary":
                 return (
                     <div>
-                        {this.state.cup}
+                        <SummaryCalc data={this.state}/>
                     </div>
                 )
         }
