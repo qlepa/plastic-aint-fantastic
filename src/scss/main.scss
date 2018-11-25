@@ -62,13 +62,14 @@ h1{
   margin:0;
   text-transform: uppercase;
   color: $primary-color;
+  text-align: center;
 }
 
 h2{
   font-size:40px;
   font-weight: normal;
   color:$secondary-color;
-  margin-top:10px;
+  margin:15px 0;
 }
 
 
@@ -91,11 +92,18 @@ button{
 
 
 .data{
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   input{
     margin:10px;
   }
   select{
     width:500px;
     height:30px;
+  }
+  fieldset{
+    margin:20px 0;
   }
 }

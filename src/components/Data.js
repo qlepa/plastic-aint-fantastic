@@ -12,7 +12,11 @@ class Data extends React.Component {
             knife: '',
             fork: '',
             plate: '',
-            straw: ''
+            straw: '',
+
+            displayCup: "none",
+            displayBottle: "none",
+            displayDrink: "none"
         }
 
     }
@@ -20,21 +24,23 @@ class Data extends React.Component {
 
     handleCup = (e) => {
         this.setState({
-            cup: e.target.value
+            cup: e.target.value,
+            displayCup: this.state.displayCup === "inline-block" ? "none" : "inline-block"
         })
 
     }
 
     handleBottle = (e) => {
         this.setState({
-            bottle: e.target.value
+            bottle: e.target.value,
+            displayBottle: this.state.displayBottle === "inline-block" ? "none" : "inline-block"
         })
-
     }
 
     handleDrinks = (e) => {
         this.setState({
-            drinks: e.target.value
+            drinks: e.target.value,
+            displayDrink: this.state.displayDrink === "inline-block" ? "none" : "inline-block"
         })
 
     }
@@ -79,6 +85,7 @@ class Data extends React.Component {
             <div className="data">
             <section className="container">
                 <form onSubmit={this.handleSubmit}>
+                    <h1>Select elements</h1>
                     <fieldset>
                         <legend>Napoje</legend>
                         <input type="checkbox" name="cup" value="1" onChange={this.handleCup}/>
@@ -93,7 +100,7 @@ class Data extends React.Component {
                     </fieldset>
 
                     <fieldset>
-                        <legend>Sztuczcze</legend>
+                        <legend>Sztućce</legend>
                         <input type="checkbox" name="knife" value="1" onChange={this.handleKnife}/>
                         <label htmlFor="knife">Noże</label>
                         <br/>
@@ -111,6 +118,10 @@ class Data extends React.Component {
                         <br/>
                     </fieldset>
                     <br/>
+
+                    {/*<img src="https://i.imgur.com/C6SJsjH.png" style={{width:"35px", display: this.state.displayCup}}/>*/}
+                    {/*<img src="https://i.imgur.com/49Yu40x.png" style={{width:"35px", display: this.state.displayBottle}}/><br/>*/}
+                    {/*<img src="https://i.imgur.com/6Ps51Jc.png" style={{width:"35px", display: this.state.displayDrink}}/><br/>*/}
 
                     <select id="type" value={this.state.type} onChange={this.handleType}>
                         <option>Bufet</option>
