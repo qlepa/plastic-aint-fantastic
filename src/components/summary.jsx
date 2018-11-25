@@ -57,6 +57,8 @@ const Cutle = (props) => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cum deserunt doloremque et
                 excepturi, facere, fugiat fugit harum illum impedit maxime nulla obcaecati officiis optio
                 placeat quibusdam quis totam voluptatum!</p>
+            <p>Check this item with extra discount: <a
+                href="https://fairtrend.pl/pl/p/Talerz-z-otrab-20-cm-10-sztuk-Biotrem/148?utm_source=shoper&utm_medium=shoper-cpc&utm_campaign=shoper-kampanie-google&shop_campaign=9322374764&gclid=Cj0KCQiArenfBRCoARIsAFc1FqdVieYvjOjffmKttkaXz0Y_eoy0AifXp-8e7KDH_p73StliwV7HrgUaAtvCEALw_wcB">Hello from the eco side!</a></p>
         </section>
     } else {
         return null
@@ -71,7 +73,9 @@ const Bottle = (props) => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet delectus dolores eius error
                 eveniet ipsa non nostrum odit, quia. Ad at corporis dolores ipsum iusto quidem. Ducimus eius
                 minus repellat!</p>
-        </section>
+                <p>Check this item with extra discount: <a
+                    href="https://www.euro.com.pl/dzbanki-filtrujace/brita-fill-go-vital-niebieski.bhtml?gclid=Cj0KCQiArenfBRCoARIsAFc1FqeK91PZ74iw3u7x_4Jqx9zA5fns0Xb3irsSsiMjBnXL_dz7-PXXUf0aArBAEALw_wcB&gclsrc=aw.ds">Eco bottles right here!</a></p>
+            </section>
     } else {
         return null
     }
@@ -84,6 +88,8 @@ const Straw = (props) => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem beatae, commodi
                 delectus eum facere facilis nihil, nobis odit quae sed sit velit voluptas! Dolores dolorum id
                 magni veniam. Veniam?</p>
+            <p>Check this item with extra discount: <a
+                href="https://sklep.2drink.pl/slomki-bambusowe-wielorazowe-ekologiczne-10-szt?id=288&gclid=Cj0KCQiArenfBRCoARIsAFc1FqfUGhWclJ26xSOd50NxHHY1WzNEYgv-FA0IyT_mTPDjEFmYhYrhZkwaAonXEALw_wcB">Super hero eco straws!</a></p>
         </section>
     } else {
         return null
