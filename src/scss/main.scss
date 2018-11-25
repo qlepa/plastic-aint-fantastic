@@ -111,5 +111,17 @@ button{
 .usage{
   ul{
     list-style:none;
+    li{
+      padding:5px 0;
+      font-size:20px;
+    }
+  }
+  fieldset{
+    padding: 10px;
+    margin:20px 0;
+    border: 2px solid $primary-color;
+  }
+  p{
+    font-size:18px;
   }
 }

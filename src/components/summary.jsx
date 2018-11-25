@@ -8,14 +8,16 @@ const Summary = (props) => {
         <section className='container'>
             <h1>Summary</h1>
             <section className='usage'>
+                <fieldset>
                 <ul>
                     <List data={data}/>
                 </ul>
+                </fieldset>
                 <p>In total You'd produce {data.kilos}kg of plastic!</p>
                 <p>It takes 1000 years to degrade plastic :(</p>
             </section>
             <section className='tips'>
-                <h2>Few tips how to use less plastic</h2>
+                <h1>Few tips how to use less plastic</h1>
                 <Cutle value={data}/>
                 <Bottle value={data}/>
                 <Straw value={data}/>
