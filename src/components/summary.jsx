@@ -95,6 +95,9 @@ const Cups = (props) => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet expedita laborum
                 molestiae quo! Aliquid aperiam at atque consequatur dignissimos, harum iusto, maxime quis quo
                 quos sint soluta sunt suscipit.</p>
+            <p>Check this item with extra discount: <a
+                href="https://www.partybox.pl/kubeczki-papierowe-kraft-6szt?pr=58409&gclid=Cj0KCQiArenfBRCoARIsAFc1Fqd3dkQ3u344T_6XuxTcgZULYsdDBsyY2QfWv6hBJJHxLeWZRRN-76kaAvycEALw_wcB">Extra
+                eco cups!</a></p>
         </section>
     } else {
         return null
