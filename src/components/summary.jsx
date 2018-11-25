@@ -34,11 +34,9 @@ const List = (props) => {
     const arr = Object.keys(props.data);
     let newAr = arr.map((e, i) => {
         if (arr.indexOf(e) > 6) {
-            console.log("za duzo");
             return null
         } else {
-            if (props.data[e]===0) {
-                console.log('jestem nizej');
+            if (props.data[e] === 0) {
                 return null
             } else {
                 return <li key={i}>{e} usage: {props.data[e]}</li>
@@ -109,7 +107,7 @@ const SummaryCalc = (props) => {
         const obj = [
             {
                 cups: 0.8,
-                bott: 0.5,
+                bottles: 0.5,
                 hot: 1,
                 knives: 1,
                 fork: 1,
@@ -133,18 +131,21 @@ const SummaryCalc = (props) => {
                 straws: 0.5,
             }];
         let partyTypeUsage = () => {
-            switch (props.data.party.toLocaleLowerCase()) {
-                case 'bufet':
+            switch (props.data.party) {
+                case 'Bufet':
+                    return obj[0];
+                case 'Foodtruck':
                     return obj[1];
-                case 'foodtruck':
+                case 'Serwis':
                     return obj[2];
-                case 'serwis':
-                    return obj[3];
+                default:
+                    console.log("nie dziala");
             }
         };
         let partyType = partyTypeUsage();
         let usageOBj = {
             cups: '',
+            hot: '',
             fork: '',
             knives: '',
             plates: '',
@@ -152,7 +153,6 @@ const SummaryCalc = (props) => {
             bottles: '',
         };
         for (let key in usageOBj) {
-            console.log(props.data[key]);
             if (props.data[key] > 0) {
                 usageOBj[key] = Math.ceil(props.data.ppl * partyType[key] * props.data.duration)
             } else {
@@ -162,13 +162,14 @@ const SummaryCalc = (props) => {
 
         let kilos = 0;
         let cost = 0;
+
         for (let key in usageOBj) {
             kilos = Math.ceil(kilos + usageOBj[key] * 0.2);
             cost = Math.ceil(cost + usageOBj[key])
         }
         usageOBj.kilos = kilos;
         usageOBj.cost = cost;
-        return usageOBj
+        return usageOBj;
 
     };
     return (

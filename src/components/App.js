@@ -11,7 +11,7 @@ class App extends Component {
             projectName: null,
             ppl: 0,
             duration: 0,
-            party: 'bufet',
+            party: 'Bufet',
             cups: 0,
             bottles: 0,
             drinks: 0,
@@ -31,7 +31,7 @@ class App extends Component {
     getStart = (projectName, participants, duration) => {
         this.setState({
             projectName: projectName,
-            participants: participants,
+            ppl: participants,
             duration: duration
         })
     };
@@ -60,7 +60,7 @@ class App extends Component {
             case "Data":
                 return (
                     <div>
-                        <Data setStage={this.setStage} getData={this.getData}/>
+                        <Data setStage={this.setStage} getData={this.getData} type={this.state.party}/>
                     </div>
                 );
             case "Summary":
