@@ -4,7 +4,19 @@ $primary-color: #E85A4F;
 $secondary-color: #8E8D8A;
 $background-color: #EAE7DC;
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
 body{
+  margin: 0 auto;
   background-color: $background-color;
   background-image: url("./background2.png");
   font-family: PT Sans, 'sans-serif';
