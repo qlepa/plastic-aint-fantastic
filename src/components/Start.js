@@ -30,6 +30,7 @@ class Start extends Component {
     }
     render() {
         return (
+            <div className="start">
             <section className="container">
                 <h1>Plastic ain't fantastic</h1>
                 <h2>Event Generator</h2>
@@ -43,6 +44,7 @@ class Start extends Component {
                     <button onClick={this.handleClick}>Go plan!</button>
                 </form>
             </section>
+            </div>
 
         )
     }

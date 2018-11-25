@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin-ext');
+
+$primary-color: #E85A4F;
+$secondary-color: #8E8D8A;
+$background-color: #EAE7DC;
+
+body{
+  background-color: $background-color;
+  background-image: url("./background2.png");
+  font-family: PT Sans, 'sans-serif';
+}
+
+.start{
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  input{
+    width:500px;
+    height:30px;
+    margin-top:10px;
+    margin-bottom:15px;
+    padding:5px;
+    border: 1px solid $secondary-color;
+
+    &:focus{
+      outline:none;
+      border:1px solid $primary-color;
+    }
+  }
+
+  label{
+    color: #8E8D8A;
+    font-weight:bold;
+  }
+}
+
+.container{
+  width:1200px;
+  margin:0 auto;
+  display:flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+h1{
+  font-size:55px;
+  margin:0;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+h2{
+  font-size:40px;
+  font-weight: normal;
+  color:$secondary-color;
+  margin-top:10px;
+}
+
+
+button{
+  width:500px;
+  height:40px;
+  margin-top:50px;
+  border:1px solid #A13E37;
+  background-color: $primary-color;
+  color:white;
+  text-transform: uppercase;
+  font-size:20px;
+  font-weight:700;
+  transition: 0.4s;
+
+  &:hover{
+    transform: scale(1.02);
+  }
+}
+
+
+.data{
+  input{
+    margin:10px;
+  }
+  select{
+    width:500px;
+    height:30px;
+  }
+}

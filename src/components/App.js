@@ -35,7 +35,7 @@ class App extends Component {
                 return (
                     <div>
                         <h3>
-                        {this.state.projectName}
+                            {this.state.projectName}
                             {this.state.participants}
                             {this.state.duration}
                         </h3>
